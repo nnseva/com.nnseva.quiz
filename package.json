@@ -1,0 +1,21 @@
+{
+  "name": "com.nnseva.quiz",
+  "version": "0.0.1",
+  "displayName": "Quiz Generator Environment",
+  "description": "Unity3d package to support generation and using random quiz for quiz-based games\n\nSee documentation by the reference above.\n\nIn order to work with localized strings you should install localizations from the Samples below",
+  "unity": "2019.3",
+  "author": {
+    "name": "Vsevolod Novikov",
+    "email": "nnseva@gmail.com"
+  },
+  "samples": [
+    {
+      "displayName": "Internationalization",
+      "description": "Internationalization assets for the Quiz Generation Environment",
+      "path": "Samples~/Internationalization"
+    }
+  ],
+  "type": "library",
+  "hideInEditor": false,
+  "keywords": ["quiz", "random", "game", "quiz game", "random quiz game"]
+}
