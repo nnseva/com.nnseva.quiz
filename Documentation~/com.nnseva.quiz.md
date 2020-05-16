@@ -12,14 +12,14 @@ Don't forget to generate locales using `Generate Locale` tool of the `Assets/Loc
 
 ## Using in the code
 
-Use quiz registry `Packages/Quiz Generator Environment/Runtime/Assets/Scripts/QuizRegistry` script instance on your component,
-and add necessary quiz sources `Packages/Quiz Generator Environment/Runtime/Assets/Scripts/*QuizSource` script instances to
-the same component to generate correspondent quizes.
+Add quiz registry script component (`Packages/Quiz Generator Environment/Runtime/Assets/Scripts/QuizRegistry.cs`) to
+your game object, and add necessary quiz sources script components (`Packages/Quiz Generator Environment/Runtime/Assets/Scripts/***QuizSource.cs`)
+to the same game object for generating quiz instances of the correspondent type.
 
-Tune added quiz source instances to adopt quiz complexity. In order to generate a quiz, just ask `random_quiz()` method
-of the quiz registry instance.
+Tune added quiz source script component to adopt quiz complexity. In order to generate a quiz, just call
+`random_quiz()` method of the quiz registry script component.
 
-You can use different sets of quiz sources on different components.
+You can use different sets of quiz sources combined with a quiz registry on different game objects.
 
 The `random_quiz()` returns an instance implementing `IQuiz` interface:
 
@@ -33,7 +33,8 @@ public interface IQuiz {
 }
 ```
 
-The `IQuiz` instance having the same `source` and `id` will return the same question and proper answer.
-The `choices` attrbute will be different as it is generated every time when the `IQuiz` is created.
+The generated `IQuiz` instance having the same `source` and `id` will return the
+same question and proper answer. The `choices` attrbute will be different as
+it is generated every time when the `IQuiz` is created.
 
 See the package source in the [project repository](https://github.com/nnseva/com.nnseva.quiz)
